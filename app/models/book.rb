@@ -14,4 +14,7 @@ class Book < ApplicationRecord
       "lovely #{matched}"
     end
   end
+  after_destroy do
+    Rails.logger.info "Book is deleted: #{self.attributes}"
+  end
 end
