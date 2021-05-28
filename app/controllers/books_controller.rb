@@ -24,9 +24,4 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
   end
 
-  def action_logger
-    logger.info "around-before"
-    yield
-    logger.info "around-after"
-  end
 end
